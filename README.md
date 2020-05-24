@@ -1,4 +1,4 @@
-# infinity
+# Infinity
 Infinity Mini PHP Framework
 
 It was Developed in core PHP. Light weight and Efficient.
