@@ -3,10 +3,10 @@ namespace Models;
 
 class Session
 {
-    public $ciphering       = "AES-128-CTR"; 
-    public $encryption_iv   = '1234567891011121';
-    public $encryption_key  = "something";
-    public $options         = 0;
+    public static $ciphering       = "AES-128-CTR"; 
+    public static $encryption_iv   = '1234567891011121';
+    public static $encryption_key  = "something";
+    public static $options         = 0;
 
     public function __construct()
     {
@@ -19,10 +19,10 @@ class Session
         $simple_string = json_encode([$key => $value]); 
 
         // Use OpenSSl Encryption method 
-        $iv_length = openssl_cipher_iv_length($this->ciphering); 
+        $iv_length = openssl_cipher_iv_length(self::$ciphering); 
         
         // Use openssl_encrypt() function to encrypt the data 
-        $encryption = openssl_encrypt($simple_string, $this->ciphering, $this->encryption_key, $this->options, $this->encryption_iv); 
+        $encryption = openssl_encrypt($simple_string, self::$ciphering, self::$encryption_key, self::$options, self::$encryption_iv); 
 
         $_SESSION['web'] = $encryption;
         
