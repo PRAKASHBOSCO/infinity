@@ -4,9 +4,7 @@
  * Code your helper function globally here.
  */
 
-namespace Helpers;
-
-if (!function_exists('env')) {
+if (!function_exists('issetenv')) {
 
     /**
      * Global Env function
@@ -16,7 +14,7 @@ if (!function_exists('env')) {
      * @return string
      * @author Prakash.j <prakashbosco1992@gmail.com>
      */
-    function env(string $key, string $defaultValue = '') : string
+    function issetenv(string $key, string $defaultValue = '') : string
     {
         return isset($_ENV[$key]) ? $_ENV[$key] : $defaultValue;
     }

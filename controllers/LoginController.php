@@ -2,9 +2,7 @@
 namespace Controllers;
 
 use Controllers\BaseController;
-use Models\Request;
-use Models\Session;
-use Models\User;
+use Digient\Framework\Request;
 
 class LoginController extends BaseController
 {
@@ -12,7 +10,9 @@ class LoginController extends BaseController
     {
         // $login = Session::checkLogin();
 
-        return;
+        print_r($request);die;
+        
+        // return;
     }
 
     public function login()

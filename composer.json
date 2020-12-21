@@ -1,5 +1,8 @@
 {
     "name": "prakash.j/infinity",
+    "description": "The Infinity Framework.",
+    "keywords": ["framework", "infinity"],
+    "type": "project",
     "authors": [
         {
             "name": "Prakash.j",
@@ -8,17 +11,20 @@
     ],
     "require": {
         "symfony/dotenv": "^5.0",
-        "illuminate/database": "^7.12"
+        "illuminate/database": "^7.12",
+        "nesbot/carbon": "^2.34",
+        "digient/framework": "dev-master"
     },
     "autoload": {
+        "files": [
+            "helpers/helper.php"
+        ],
         "psr-4": {
             "Models\\": "models/",
             "Controllers\\": "controllers/",
             "Abstracts\\": "abstracts/",
             "Helpers\\": "helpers/"
-        },
-        "classmap": [
-            "classes"
-        ]
-    }
+        }
+    },
+	"minimum-stability": "dev"
 }
